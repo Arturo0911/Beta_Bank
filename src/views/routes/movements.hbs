@@ -1,0 +1,66 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each movimientos}}
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Cuentas
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{numero_cuenta}}</h5>
+                        <p class="card-text">{{tipo_cuenta}}</p>
+                        <a href="/main/selected/{{numero_cuenta}}" class="btn btn-success">Pago de servicios</a>
+                        <a href="/main/transfer/{{numero_cuenta}}" class="btn btn-primary">Despósito y/o transferencias</a>
+                        <a href="#" class="btn btn-warning">Modificar</a>
+                    </div>
+                </div>
+                <!--<form>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="inputAccount">Seleccion la cuenta</label>
+
+                            <select id="inputAccount" name="select" class="form-control">
+                                <option></option>
+                                {{#each movimientos}}
+                                <option>
+                                    {{numero_cuenta}}
+                                </option>
+                                <a href="/main/movements" class="btn btn-success "> select</a>
+                                {{/each}}
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputTypeAccount">Tipo de cuenta</label>
+                            <input type="email" disabled class="form-control" id="inputTypeAccount">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" disabled class="form-control" id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" disabled class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" disabled class="form-control" id="inputAddress2"
+                            placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>-->
+            </div>
+        {{/each}}
+    </div>
+</div>

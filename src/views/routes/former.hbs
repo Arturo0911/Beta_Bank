@@ -1,0 +1,73 @@
+<div class="container p-4">
+    <form action="/main/selected" method="POST">
+        {{#each cuentas}}
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputTypeAccount">Tipo de cuenta</label>
+                    <input type="text" disabled value="{{tipo_cuenta}}" name="tipo_cuenta" class="form-control"
+                        id="inputTypeAccount">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputQuantity">Valores de la cuenta</label>
+                    <input readonly="readonly" type="text" value="{{valores_cuenta}}" name="valores_cuenta"
+                        class="form-control" id="inputQuantity">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="AccountNumber">Número de cuenta</label>
+                    <input readonly="readonly" type="text" value="{{numero_cuenta}}" name="numero_cuenta"
+                        class="form-control" id="AccountNumber">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputAddress">Nombres del titular</label>
+                    <input type="text" value="{{nombres_cliente}}" class="form-control" id="inputAddress" disabled
+                        placeholder="1234 Main St">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputAddress2">Cedula</label>
+                    <input type="text" disabled value="{{cedula_cliente}}" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <textarea autofocus class="form-control" maxlength="4000" name="descripcion" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputState">Tipo de movimiento a realizar</label>
+                    <select class="form-control" id="select_operation" name="operacion">
+                        <option>Transferencias</option>
+                        <option>Compras</option>
+                        <option>Pagos de servicios</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputValores">Cantidad</label>
+                    <input class="form-control" type="number" name="valores" step="0.01" min="0" id="inputValores">
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit" class="btn btn-primary">Realizar</button>
+        {{/each}}
+    </form>
+
+
+    <div class="overlay" id="overlay">
+        <div class="overlay_hidden" id="overlay_hidden">
+            <div class="form-row">
+                <input class="form-control" type="text">
+                <select class="form-control" id="select_services" name="select_services">
+                    <option selected>Transferencias</option>
+                    <option>Servicios básicos(detallar)</option>
+                </select>
+                <input class="form-control" type="text" name="" id="">
+                <button class="btn btn-success" id="Close_overlay">cerrar</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>

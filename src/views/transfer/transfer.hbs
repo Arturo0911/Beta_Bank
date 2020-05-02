@@ -1,0 +1,61 @@
+<div class="container p-4">
+    <form action="/main/transfer" method="POST">
+        {{#each valores}}
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputAcount">Cuenta</label>
+                    <input class="form-control" name="account_emisor" value="{{numero_cuenta}}" type="text" readonly="readonly">
+                </div>
+                
+                <div class="form-group col-md-5">
+                    <label for="inputAddress2">Cedula</label>
+                    <input type="text" disabled value="{{cedula_cliente}}" class="form-control" id="inputAddress2"
+                        placeholder="Apartment, studio, or floor">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputAcount">Propietario</label>
+                    <input class="form-control" value="{{nombres_cliente}}" type="text" readonly="readonly">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputAddress">Fondos de la cuenta</label>
+                    <input type="text" name="valores" value="{{valores_cuenta}}" class="form-control" id="inputAddress"
+                         readonly="readonly">
+                </div>
+            </div>
+        {{/each}}
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputAcount">Cuenta</label>
+                <input class="form-control" name="account_receptor" type="text">
+            </div>
+            <div class="form-group col-md-5">
+                <label for="inputAcount">Propietario</label>
+                <input class="form-control" name="prop_destiny" type="text">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputAcount">Cantidad a transferir</label>
+                <input class="form-control" name="cantidad_enviar" type="number" step="0.01">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputState">Concepto de transferencia</label>
+                <select class="form-control" id="select_operation" name="operacion">
+                    <option>Compras</option>
+                    <option>Pagos de servicios</option>
+                    <option>Otros</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputDetail">Detalles</label>
+                <textarea maxlength="4000" class="form-control" name="descripcion" id="inputDetail"  rows="3"></textarea>
+            </div>
+            
+        </div>
+        <button class="btn btn-success" type="submit">Transferir</button>
+        <button class="btn btn-warning" type="button">Limpiar</button>
+    </form>
+
+</div>

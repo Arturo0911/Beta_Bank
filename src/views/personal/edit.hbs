@@ -1,0 +1,61 @@
+<div class="container p-4">
+    <form action="/main/edit" method="POST" enctype="multipart/form-data">
+        {{#each accounts_cliente}}
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputNombre">Nombres</label>
+                    <input type="text" value="{{nombres}}" class="form-control" id="inputNombre" name="nombres" autofocus>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputApellido">Apellidos</label>
+                    <input required type="text" value="{{apellidos}}" class="form-control" id="inputApellido" name="apellidos">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCedula">Cedula</label>
+                    <input readonly="readonly" type="text" value="{{cedula}}" class="form-control" id="inputCedula" name="cedula">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputFoto">Imagen</label>
+                    <div class="custom-file">
+                        <input required type="file" class="custom-file-input" id="inputGroupFile03"
+                            aria-describedby="inputGroupFileAddon03" name="image">
+                        <label class="custom-file-label" for="inputGroupFile03">Selecciona la imagen</label>
+                    </div>
+                    
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputTelefono">Email</label>
+                    <input required type="text" value="{{email}}" class="form-control" id="inputEmail4" name="email" name="email">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputTelefono">Telefono</label>
+                    <input required type="text" value="{{telefono}}" class="form-control" id="inputTelefono" name="telefono">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Dirección</label>
+                <input required type="text" value="{{direccion}}" class="form-control" id="inputAddress" placeholder="calle, manzana y/o villa"
+                    name="direccion">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Ciudad</label>
+                    <select id="inputCity" value="{{ciudad}}" class="form-control" name="ciudad">
+                        <option selected >Provincias</option>
+                        <option >Guayas</option>
+                        <option >Azuay</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputState">Cantón</label>
+                    <select id="inputState" class="form-control" name="estado">
+                        
+                    </select>
+                </div>
+            </div>
+        {{/each}}
+        <button type="submit" class="btn btn-success">Actualizar</button>
+    </form>
+
+
+</div>

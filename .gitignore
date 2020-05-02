@@ -1,0 +1,8 @@
+node_modules/
+.vscode
+data
+etc
+img
+img_user
+logs
+provincias.txt

@@ -1,0 +1,45 @@
+{
+    "httpPort": 3001,
+    "store": {
+        "provider": "fs"
+    },
+    "blobStorage": {
+        "provider": "fs"
+    },
+    "logger": {
+        "console": {
+            "transport": "console",
+            "level": "debug"
+        },
+        "file": {
+            "transport": "file",
+            "level": "info",
+            "filename": "logs/reporter.log"
+        },
+        "error": {
+            "transport": "file",
+            "level": "error",
+            "filename": "logs/error.log"
+        }
+    },
+    "allowLocalFilesAccess": true,
+    "reportTimeout": 6000,
+    "templatingEngines": {
+        "strategy": "http-server"
+    },
+    "extensions": {
+        "authentication": {
+            "cookieSession": {
+                "secret": "arturo_dev"
+            },
+            "admin": {
+                "username": "arturo",
+                "password": "arturo"
+            },
+            "enabled": true
+        },
+        "scripts": {
+            "strategy": "http-server"
+        }
+    }
+}

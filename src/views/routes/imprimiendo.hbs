@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">N° cuenta</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Valores</th>
+        </tr>
+    </thead>
+    {{#each filtro}}
+        <tbody>
+            <tr>
+                <td>{{numero_cuenta}}</td>
+                <td>{{fecha}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{valores}}</td>
+            </tr>
+        </tbody>
+    {{/each}}
+</table>

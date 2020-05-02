@@ -1,0 +1,36 @@
+{
+    "name": "Bank",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "express-handlebars": "^4.0.3",
+        "express-mysql": "0.0.1",
+        "express-mysql-session": "^2.1.4",
+        "express-session": "^1.17.0",
+        "express-validator": "^6.4.0",
+        "fs-extra": "^9.0.0",
+        "md5": "^2.2.1",
+        "morgan": "^1.10.0",
+        "multer": "^1.4.2",
+        "mysql": "^2.18.1",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "pdfmake": "^0.1.65",
+        "puppeteer": "^3.0.1",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
